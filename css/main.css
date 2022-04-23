@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    color: #FFF;
+    background-color: #0e1224;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    padding: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+
+
+.content{
+    background: linear-gradient(to bottom, #043d95 10%, #0b0c17);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: inset 1px 2px 0px rgb(255 255 255 / 18%), inset -2px -2px 2px rgb(0 0 0 / 65%);
+    width: fit-content;
+}
+
+.start-page{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    display: none;
+}
+
+.start-page-item span{
+    display: block;
+    font-weight: bold;
+}
+
+.start-page-item .title{
+    font-size: 1.7rem;
+}
+
+.start-page-item .note{
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: 0.3rem;
+}
+
+.start-page-item .btns{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn{
+    height: 3rem;
+    min-width: 9rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: #FFF;
+    background: dodgerblue;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background: rgb(5, 89, 173);
+    letter-spacing: 3px;
+}
+
+.btns .choose2{
+    background-color: crimson;
+}
+
+.btns .choose2:hover{
+    background-color: rgb(124, 3, 28);
+
+}
+
+.start-btn{
+    background-color: rgb(12, 220, 235);
+}
+
+.start-btn:hover{
+    background-color: rgb(10, 163, 173);
+}
+
+#playPage .turn-player{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#board{
+    width: 20rem;
+    height: 25rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1rem;
+    /* background-color: #043d95; */
+    padding-top: 1.6rem;
+}
+
+.cell{
+    box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.cell:hover{
+    box-shadow: 0 0 10px cyan;
+    border-color: cyan;
+    border-radius: 20px;
+}
