@@ -190,3 +190,10 @@ header{
     font-weight: bold;
     margin-bottom: 2.6rem;
 }
+
+@media screen and (min-width: 750px) {
+
+    #board{
+        width: 30rem;
+    }
+}
