@@ -16,29 +16,46 @@
         </header>
         <!-- end header -->
 
+        <!-- start content -->
         <div class="content">
-            <div class="start-page">
-                <div class="start-page-item">
-                    <span class="title">Select player one's mark</span>
-                    <span class="note">(note : x will play first)</span>
-                    <div class="btns">
-                        <button id="x" class="choose btn"> X </button>
-                        <button id="o" class="choose choose2 btn">  O </button>
-                    </div>
-                </div>
-    
+            <div id="start-page" class="start-page">
                 <div class="start-page-item">
                     <span class="title">Select players number</span>
                     <div class="btns">
-                        <button id="playerX" class="choose btn">1 Player</button>
-                        <button id="playerO" class="choose choose2 btn">2 Player</button>
+                        <input type="radio" name="game-type" id="one-player" class="choose-radio game-type">
+                        <input type="radio" name="game-type" id="two-player" class="choose-radio game-type">
+                        <label for="one-player">
+                            <span id="one-player-btn" class="choose btn"> 1 player </span>
+                        </label>
+                        <label for="two-player">
+                            <span id="two-player-btn" class="choose choose2 btn"> 2 player </span>
+                        </label>
                     </div>
                 </div>
-                <button class="btn start-btn">start game</button>
+
+                <div id="select-players-div" class="start-page-item">
+                    <span class="title">Select player one's mark</span>
+                    <span class="note">(note : x will play first)</span>
+                    <div class="btns">
+                        <input type="radio" name="mark" id="x-mark" class="choose-radio mark">
+                        <input type="radio" name="mark" id="o-mark" class="choose-radio mark">
+                        <label for="x-mark">
+                            <span id="x" class="choose btn"> X </span>
+                        </label>
+                        <label for="o-mark">
+                            <span id="o" class="choose choose2 btn">  O </span>
+                        </label>
+                    </div>
+                </div>
+    
+                
+                <div class="start">
+                    <button class="btn start-btn">start game</button>
+                </div>
             </div>
 
             <div id="playPage">
-               <span class="turn-player">turn of x player</span>
+               <span id="turn-player">Turn of X Player</span>
                 <div id="board">
                     <div class="cell"></div>
                     <div class="cell"></div>
@@ -52,10 +69,18 @@
                 </div>
             </div>
         </div>
+        <!-- end content -->
 
 
-        <footer>
-        </footer>
+        <!-- start end-game -->
+        <div id="end-game">
+            <p></p>
+            <div class="btns">
+                <span id="play-again-btn" class="choose btn">  play again </span>
+                <span id="end-game-btn" class="choose choose2 btn">  end game </span>
+            </div>
+        </div>
+        <!-- end end-game -->
 
     </div>
     

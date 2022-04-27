@@ -4,13 +4,14 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+
 .container{
     color: #FFF;
     background-color: #0e1224;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -37,7 +38,17 @@ header{
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    align-items: center;
+}
+
+.start-page input{
+    display: none;
+}
+
+.start-page-item{
+    position: relative;
+}
+
+#select-players-div{
     display: none;
 }
 
@@ -56,7 +67,7 @@ header{
     margin-top: 0.3rem;
 }
 
-.start-page-item .btns{
+.btns{
     margin-top: 1rem;
     display: flex;
     gap: 1rem;
@@ -64,48 +75,74 @@ header{
 
 .btn{
     height: 3rem;
-    min-width: 9rem;
+    min-width: 8rem;
     padding: 0 1rem;
     cursor: pointer;
     color: #FFF;
-    background: dodgerblue;
+    background: crimson;
     text-transform: capitalize;
     border: none;
     outline: none;
     font-size: 1.2rem;
     font-weight: bold;
+    text-align: center;
+    line-height: 3rem;
     border-radius: 10px;
     box-shadow: 2px 2px 2px rgb(255 255 255 / 26%), -2px -2px 5px rgb(0 0 0 / 87%);
     transition: 0.5s;
 }
 
 .btn:hover{
-    background: rgb(5, 89, 173);
+    background-color: rgb(124, 3, 28);
     letter-spacing: 3px;
 }
 
-.btns .choose2{
-    background-color: crimson;
-}
-
-.btns .choose2:hover{
-    background-color: rgb(124, 3, 28);
-
-}
-
-.start-btn{
+.choose2{
     background-color: rgb(12, 220, 235);
 }
 
-.start-btn:hover{
+.choose2:hover{
     background-color: rgb(10, 163, 173);
 }
 
-#playPage .turn-player{
+.checked{
+    background-color: transparent;
+    scale: 0.9;
+}
+
+.checked:hover{
+    background-color: rgba(0, 0, 0,0.3);
+}
+
+
+.start{
+    position: relative;
+    width: fit-content;
+    align-self: center;
+}
+
+.start-btn{
+    background-color: dodgerblue;
+
+}
+
+.start-btn:hover{
+    background: rgb(5, 89, 173);
+
+}
+
+
+#playPage{
+    display: none;
+}
+
+
+#playPage #turn-player{
     display: block;
     font-size: 1.4rem;
     font-weight: bold;
     text-align: center;
+    color: crimson;
 }
 
 #board{
@@ -115,7 +152,6 @@ header{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
     gap: 1rem;
-    /* background-color: #043d95; */
     padding-top: 1.6rem;
 }
 
@@ -124,10 +160,33 @@ header{
     display: grid;
     place-items: center;
     cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .cell:hover{
-    box-shadow: 0 0 10px cyan;
-    border-color: cyan;
+    box-shadow: 0 0 10px rgb(47, 202, 250);
+    border-color: rgb(26, 195, 252);
     border-radius: 20px;
+}
+
+#end-game{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0,0.9);
+    display: none;
+}
+
+#end-game p{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2.6rem;
 }
